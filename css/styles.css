@@ -28,3 +28,13 @@ body {
 a {
   color: #fff;
 }
+
+/* mouse over link */
+a:hover {
+    color: #FF5733;
+}
+
+/* selected link */
+a:active {
+    color: #FF3333;
+}
