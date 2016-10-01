@@ -17,6 +17,9 @@ header {
     -o-background-size: cover;
 }
 
+h3 {
+    padding-top: 20px;
+}
 
 body {
 	font-family: 'Raleway', sans-serif;
@@ -30,11 +33,13 @@ a {
 }
 
 /* mouse over link */
-a:hover {
+a:hover,
+a:active {
     color: #FF5733;
 }
 
-/* selected link */
-a:active {
-    color: #FF3333;
+
+.logo {
+    margin-bottom:-5px;
+    width: 120px;
 }
