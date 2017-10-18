@@ -43,3 +43,30 @@ a:active {
     margin-bottom:-5px;
     width: 120px;
 }
+
+@font-face {
+    font-family: "Nobel Bold";
+     src: url(/css/nobel.woff);
+}
+#thc {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 28px;
+    margin: 10px 0;
+    color: #adadad;
+}
+.hiring {
+    color: #ffffff;
+}
+#thc:hover, #thc:active, .hiring:hover, .hiring:active {
+    color: #FF5733 !important;
+}
+#thc:hover>.hiring,#thc:active>.hiring {
+    color: #FF5733 !important;
+}
+.spacer {
+    margin-bottom : 10px;
+}
+h2 {
+    padding-top: 30px;
+}
