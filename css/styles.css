@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('../img/wintery-sunburst.svg');
+    background-image: url(../css/wintery-sunburst.svg);
     background-size: cover; /* Adjust to cover, contain, or custom dimensions */
     background-repeat: no-repeat; /* Prevents the image from tiling */
     background-position: center; /* Centers the SVG */
@@ -34,7 +34,7 @@ header {
 
 @font-face {
     font-family: "Nobel Bold";
-     src: url(/css/nobel.woff);
+     src: url(../css/nobel.woff);
 }
 
 
