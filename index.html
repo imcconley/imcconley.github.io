@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link
@@ -30,7 +31,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        background-image: url("https://raw.githubusercontent.com/imcconley/imcconley.github.io/refs/heads/master/img/bg2.svg");
+        background-image: url("img/bg2.svg");
         background-size: cover; /* Adjust to cover, contain, or custom dimensions */
         background-repeat: no-repeat; /* Prevents the image from tiling */
         background-position: center; /* Centers the SVG */
@@ -99,7 +100,7 @@
         max-width: 100%;
         max-height: 100%;
         border-radius: 20px;
-        z-index: -100;
+        z-index: 100;
       }
 
       @media (max-width: 520px) {
@@ -109,6 +110,7 @@
       }
     </style>
   </head>
+
   <body>
     <header id="background">
       <div class="spacer"></div>
@@ -131,20 +133,20 @@
     </header>
     <script>
       // Array of background image URLs
-      const backgroundImages = [
-        'url("https://raw.githubusercontent.com/imcconley/imcconley.github.io/refs/heads/master/img/bg1.svg")', // Replace with actual URLs
-        'url("https://raw.githubusercontent.com/imcconley/imcconley.github.io/refs/heads/master/img/bg2.svg")',
+      var backgroundImages = [
+        'url("img/bg1.svg")', // Replace with actual URLs
+        'url("img/bg2.svg")',
       ];
 
       let currentIndex = 0;
-      const backgroundDiv = document.getElementById("background");
+      var backgroundDiv = document.getElementById("background");
 
       // Function to change the background image
       function changeBackground() {
         backgroundDiv.style.backgroundImage = backgroundImages[currentIndex];
         currentIndex = (currentIndex + 1) % backgroundImages.length; // Cycle through images
-        setInterval(changeBackground, 1000);
       }
+      setInterval(changeBackground, 250);
 
       // Change background every 5 seconds
 
