@@ -10,6 +10,15 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
     />
     <style>
+      @keyframes spinBackground {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
       body {
         font-family: "Raleway", sans-serif;
         text-align: center;
@@ -21,7 +30,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        background-image: url("https://raw.githubusercontent.com/imcconley/imcconley.github.io/refs/heads/master/img/bg.svg");
+        background-image: url("https://raw.githubusercontent.com/imcconley/imcconley.github.io/refs/heads/master/img/bg2.svg");
         background-size: cover; /* Adjust to cover, contain, or custom dimensions */
         background-repeat: no-repeat; /* Prevents the image from tiling */
         background-position: center; /* Centers the SVG */
@@ -101,7 +110,7 @@
     </style>
   </head>
   <body>
-    <header>
+    <header id="background">
       <div class="spacer"></div>
       <div id="hi">
         <h1>Hey Now, I'm Chris</h1>
@@ -120,5 +129,27 @@
         <img src="img/GeerY.gif" id="img" />
       </div>
     </header>
+    <script>
+      // Array of background image URLs
+      const backgroundImages = [
+        'url("https://raw.githubusercontent.com/imcconley/imcconley.github.io/refs/heads/master/img/bg1.svg")', // Replace with actual URLs
+        'url("https://raw.githubusercontent.com/imcconley/imcconley.github.io/refs/heads/master/img/bg2.svg")',
+      ];
+
+      let currentIndex = 0;
+      const backgroundDiv = document.getElementById("background");
+
+      // Function to change the background image
+      function changeBackground() {
+        backgroundDiv.style.backgroundImage = backgroundImages[currentIndex];
+        currentIndex = (currentIndex + 1) % backgroundImages.length; // Cycle through images
+        setInterval(changeBackground, 1000);
+      }
+
+      // Change background every 5 seconds
+
+      // Initial background set
+      changeBackground();
+    </script>
   </body>
 </html>
